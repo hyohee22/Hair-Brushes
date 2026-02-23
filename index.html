@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Brushes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        script: ['Pinyon Script', 'cursive'],
+                    },
+                    colors: {
+                        'vintage-cream': '#FDFBF7',
+                        'vintage-pink': '#E8B4B8',
+                        'vintage-dark': '#2C2C2C',
+                        'vintage-gold': '#D4AF37',
+                        'vintage-line': '#B89A7A',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased selection:bg-vintage-pink selection:text-vintage-dark bg-vintage-cream text-vintage-dark font-sans">
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-vintage-pink z-[60] w-0 transition-all duration-100 ease-out"></div>
+
+    <!-- Navbar -->
+    <nav class="border-b border-vintage-line grid grid-cols-4 text-xs md:text-sm font-sans uppercase tracking-widest bg-vintage-cream sticky top-0 z-50">
+        <a href="#home" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Home</a>
+        <a href="#radiate" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Brush, Shine</a>
+        <a href="#every-touch" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Every Touch</a>
+        <a href="#shop" class="py-4 text-center hover:bg-vintage-pink/20 hover:text-vintage-dark transition-colors bg-vintage-dark text-vintage-cream">The Masterpiece</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden border-b border-vintage-line">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="./images/main2.jpg" 
+                alt="Vintage Hair Styling" 
+                class="w-full h-full object-cover opacity-80"
+                referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-black/35"></div>
+            <div class="absolute inset-0 bg-vintage-cream/15 mix-blend-multiply"></div>
+        </div>
+        <div class="absolute inset-0 z-[1] pointer-events-none overflow-hidden">
+            <p class="absolute top-2 left-3 md:top-4 md:left-6 font-script text-[20vw] md:text-[14vw] leading-none select-none" style="color: rgba(255,255,255,0.24);">Angel</p>
+            <p class="absolute bottom-1 right-2 md:bottom-3 md:right-6 font-script text-[18vw] md:text-[12vw] leading-none select-none" style="color: rgba(255,255,255,0.16);">Ritual</p>
+        </div>
+
+        <!-- Diamond Logo -->
+        <div class="z-10 mt-12">
+            <div class="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full bg-vintage-pink/88 border-4 border-vintage-cream shadow-xl animate-scale-in"></div>
+                <div class="absolute inset-3 md:inset-4 rounded-full border border-vintage-cream/70"></div>
+                <div class="relative z-10 w-[82%] h-[82%] rounded-full text-center text-vintage-cream animate-fade-in-up px-6 md:px-10 py-6 md:py-8 border border-vintage-cream/60 bg-vintage-dark/20 backdrop-blur-[1px] flex flex-col items-center justify-center">
+                    <img src="./images/logo.png" alt="Brand mark" class="w-12 h-6 object-contain mb-2 opacity-90" style="filter: brightness(0) invert(1);" referrerpolicy="no-referrer"/>
+                    <p class="font-sans text-[10px] tracking-[0.35em] uppercase mb-3">Est. The Atelier 1924</p>
+                    <h1 class="font-script text-6xl md:text-8xl leading-none mb-2 text-vintage-cream drop-shadow-md">Eclat</h1>
+                    <p class="font-serif italic text-base md:text-lg text-vintage-cream/95">Heritage Hair Brush</p>
+                    <p class="font-sans text-[10px] tracking-[0.28em] uppercase mt-4 pt-3 border-t border-vintage-cream/50">Paris / New York</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Angel Detail Section -->
+    <section class="relative border-b border-vintage-line bg-[#f7f1f4] overflow-hidden">
+        <div class="absolute -top-16 -left-12 w-72 h-72 rounded-full bg-vintage-pink/25 blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-10 w-80 h-80 rounded-full bg-vintage-pink/20 blur-3xl"></div>
+
+        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 px-8 md:px-20 py-16 md:py-24">
+            <div class="scroll-reveal">
+                <p class="font-sans text-[11px] uppercase tracking-[0.28em] text-vintage-dark/60 mb-5">Signature Engineering</p>
+                <h2 class="font-script text-5xl md:text-7xl text-vintage-pink leading-[0.95] mb-6">Your Angel's<br/>Hidden Secrets</h2>
+                <p class="font-serif text-xl md:text-2xl leading-relaxed text-vintage-dark/90 max-w-xl">
+                    Designed to detangle with less pulling and less breakage, the Tangle Angel brush combines sculptural beauty with everyday performance.
+                </p>
+            </div>
+
+            <div class="relative min-h-[560px] md:min-h-[660px] scroll-reveal delay-200">
+                <div class="absolute inset-0 border border-vintage-line/30 bg-white/50 backdrop-blur-sm"></div>
+                <img src="./images/img05 1.png" alt="Tangle Angel brush detail visual" class="absolute left-1/2 top-1/2 w-[64%] md:w-[58%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_24px_40px_rgba(92,64,71,0.25)]" referrerpolicy="no-referrer"/>
+
+                <div class="hidden md:block absolute left-6 top-32 max-w-[180px]">
+                    <p class="font-sans text-[11px] leading-relaxed tracking-wide text-vintage-dark/80">Ergonomic wing design gives a secure grip for controlled, effortless brushing.</p>
+                    <span class="absolute -right-20 top-5 w-16 border-t border-vintage-line/70"></span>
+                    <span class="absolute -right-[88px] top-[18px] w-2 h-2 rounded-full bg-vintage-line/80"></span>
+                </div>
+                <div class="hidden md:block absolute right-6 top-32 max-w-[180px] text-right">
+                    <p class="font-sans text-[11px] leading-relaxed tracking-wide text-vintage-dark/80">Anti-bacterial additives are embedded in the body to keep the brush fresher and cleaner.</p>
+                    <span class="absolute -left-20 top-5 w-16 border-t border-vintage-line/70"></span>
+                    <span class="absolute -left-[88px] top-[18px] w-2 h-2 rounded-full bg-vintage-line/80"></span>
+                </div>
+                <div class="hidden md:block absolute left-6 bottom-32 max-w-[180px]">
+                    <p class="font-sans text-[11px] leading-relaxed tracking-wide text-vintage-dark/80">Heat-resistant, anti-static flex bristles detangle wet or dry hair with less tugging.</p>
+                    <span class="absolute -right-20 top-5 w-16 border-t border-vintage-line/70"></span>
+                    <span class="absolute -right-[88px] top-[18px] w-2 h-2 rounded-full bg-vintage-line/80"></span>
+                </div>
+                <div class="hidden md:block absolute right-6 bottom-32 max-w-[180px] text-right">
+                    <p class="font-sans text-[11px] leading-relaxed tracking-wide text-vintage-dark/80">Rounded tips and a contoured pad help protect the scalp while reducing breakage.</p>
+                    <span class="absolute -left-20 top-5 w-16 border-t border-vintage-line/70"></span>
+                    <span class="absolute -left-[88px] top-[18px] w-2 h-2 rounded-full bg-vintage-line/80"></span>
+                </div>
+            </div>
+
+            <div class="md:hidden grid grid-cols-1 gap-3">
+                <div class="border border-vintage-line/40 bg-white/70 p-4">
+                    <p class="font-sans text-xs text-vintage-dark/80">Ergonomic wing design for a secure grip and easy control.</p>
+                </div>
+                <div class="border border-vintage-line/40 bg-white/70 p-4">
+                    <p class="font-sans text-xs text-vintage-dark/80">Anti-bacterial body helps keep the brush cleaner between uses.</p>
+                </div>
+                <div class="border border-vintage-line/40 bg-white/70 p-4">
+                    <p class="font-sans text-xs text-vintage-dark/80">Heat-resistant anti-static flex bristles detangle gently.</p>
+                </div>
+                <div class="border border-vintage-line/40 bg-white/70 p-4">
+                    <p class="font-sans text-xs text-vintage-dark/80">Rounded tips and a contoured pad reduce pulling and breakage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="radiate" class="grid grid-cols-1 md:grid-cols-2 border-b border-vintage-line bg-vintage-cream">
+        <div class="border-b md:border-b-0 md:border-r border-vintage-line p-12 md:p-24 flex items-center justify-center bg-[#EBEBEB]">
+            <div class="relative w-full aspect-[4/5] overflow-hidden border border-vintage-line p-2 bg-white shadow-lg rotate-1 scroll-reveal">
+                <img 
+                    src="./images/image 40.png" 
+                    alt="Woman brushing hair" 
+                    class="w-full h-full object-cover filter sepia-[0.3]"
+                    referrerpolicy="no-referrer"
+                />
+            </div>
+        </div>
+        <div class="p-12 md:p-24 flex flex-col justify-center text-center md:text-left relative overflow-hidden">
+            <div class="absolute inset-0 bg-center bg-cover opacity-40" style="background-image: url('./images/bg2.jpg');"></div>
+            <div class="absolute inset-0 bg-white/35"></div>
+            <div class="scroll-reveal delay-200 relative z-10">
+                <h2 class="font-script text-6xl md:text-7xl text-vintage-pink mb-6 relative z-10 drop-shadow-sm">Brush, Shine, <br/><span class="pl-12">Radiate</span></h2>
+                <p class="font-serif text-xl md:text-2xl leading-relaxed text-vintage-dark mb-8 relative z-10">
+                    More than a daily brush, Tangle Angel is designed to detangle gently, reduce breakage, 
+                    and glide through hair with comfort. Its signature silhouette blends beauty with performance, 
+                    turning every brush stroke into a simple self-care ritual for smooth, healthy-looking hair.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start relative z-10">
+                    <button class="px-8 py-3 bg-vintage-pink text-vintage-dark font-sans text-xs font-bold uppercase tracking-widest border border-vintage-line hover:bg-white transition-colors shadow-sm">
+                        Our Story
+                    </button>
+                    <button class="px-8 py-3 bg-white/50 backdrop-blur-sm text-vintage-dark font-sans text-xs font-bold uppercase tracking-widest border border-vintage-line hover:bg-vintage-dark hover:text-vintage-cream transition-colors">
+                        The Collection
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section id="collection" class="border-b border-vintage-line bg-vintage-cream">
+        <div class="grid grid-cols-1 md:grid-cols-4">
+            <div class="col-span-1 md:col-span-4 border-b border-vintage-line p-8 flex justify-between items-end">
+                <h2 class="font-script text-5xl md:text-6xl text-vintage-pink scroll-reveal">Club & Gallery</h2>
+                <a href="#" class="font-sans text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4 hover:text-vintage-pink">View All</a>
+            </div>
+            
+            <!-- Gallery Items -->
+            <div class="aspect-square border-b md:border-b-0 border-r border-vintage-line relative group overflow-hidden scroll-reveal delay-100">
+                <img src="./images/image 37.png"  alt="Gallery" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" referrerpolicy="no-referrer"/>
+                <div class="absolute inset-0 bg-vintage-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-white px-4 py-2 font-sans text-xs uppercase tracking-widest border border-vintage-line">View</span>
+                </div>
+            </div>
+            <div class="aspect-square border-b md:border-b-0 border-r border-vintage-line relative group overflow-hidden scroll-reveal delay-200">
+                <img src="./images/image 38.png"  alt="Gallery" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" referrerpolicy="no-referrer"/>
+                <div class="absolute inset-0 bg-vintage-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-white px-4 py-2 font-sans text-xs uppercase tracking-widest border border-vintage-line">View</span>
+                </div>
+            </div>
+            <div class="aspect-square border-b md:border-b-0 border-r border-vintage-line relative group overflow-hidden scroll-reveal delay-300">
+                <img src="./images/image 37.png"  alt="Gallery" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" referrerpolicy="no-referrer"/>
+                <div class="absolute inset-0 bg-vintage-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-white px-4 py-2 font-sans text-xs uppercase tracking-widest border border-vintage-line">View</span>
+                </div>
+            </div>
+            <div class="aspect-square border-b md:border-b-0 border-vintage-line relative group overflow-hidden scroll-reveal delay-400">
+                <img src="./images/image 38.png" alt="Gallery" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" referrerpolicy="no-referrer"/>
+                <div class="absolute inset-0 bg-vintage-pink/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="bg-white px-4 py-2 font-sans text-xs uppercase tracking-widest border border-vintage-line">View</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atmosphere Section -->
+    <section id="every-touch" class="relative py-48 bg-black text-vintage-cream overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 opacity-90">
+            <img 
+                src="./images/bg-04.jpg" 
+                alt="Atmosphere" 
+                class="w-full h-full object-cover object-center scale-105"
+                referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative z-10 max-w-2xl mx-auto text-center px-6 scroll-reveal">
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <span class="h-px w-16 md:w-24 bg-vintage-cream/40"></span>
+                <span class="px-4 py-1 border border-vintage-cream/40 rounded-full font-sans text-[10px] tracking-[0.25em] uppercase text-vintage-cream/80">Whispered Ritual</span>
+                <span class="h-px w-16 md:w-24 bg-vintage-cream/40"></span>
+            </div>
+            <p class="font-serif italic text-3xl md:text-5xl leading-tight mb-8 text-white">
+                "Beauty is not just seen,<br/>it is felt in every touch."
+            </p>
+            <p class="font-sans text-[10px] uppercase tracking-[0.3em] text-white/70">
+                The Midnight Collection
+            </p>
+        </div>
+    </section>
+
+    <!-- Feature List -->
+    <section id="ritual" class="grid grid-cols-1 md:grid-cols-2 border-b border-vintage-line bg-vintage-cream">
+        <div class="border-b md:border-b-0 md:border-r border-vintage-line h-full flex flex-col">
+            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-100">
+                <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Natural Boar Bristles</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
+            </div>
+            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-200">
+                <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Hand-Carved Olive Wood</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
+            </div>
+            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-300">
+                <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Scalp Stimulation</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
+            </div>
+            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-400">
+                <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Lifetime Warranty</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
+            </div>
+        </div>
+        <div class="relative min-h-[400px]">
+            <img 
+                src="./images/image 42.png" 
+                alt="Woman with beautiful hair" 
+                class="absolute inset-0 w-full h-full object-cover"
+                referrerpolicy="no-referrer"
+            />
+            <div class="absolute bottom-8 right-8 text-white text-right scroll-reveal">
+                <p class="font-script text-5xl md:text-6xl mb-2">For the love</p>
+                <p class="font-script text-5xl md:text-6xl">of the hair</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-24 bg-vintage-cream border-b border-vintage-line">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="font-script text-6xl text-vintage-pink mb-12 scroll-reveal">The Masterpiece</h2>
+            <div class="border border-vintage-line p-8 inline-block bg-white shadow-xl max-w-md w-full scroll-reveal delay-200">
+                <div class="aspect-square overflow-hidden mb-8 border border-vintage-line/10">
+                    <img src="./images/img04.jpg"  alt="Tangle Angel Brush" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" referrerpolicy="no-referrer"/>
+                </div>
+                <h3 class="font-serif text-3xl mb-2">The Tangle Angel Original</h3>
+                <p class="font-sans text-xs uppercase tracking-widest text-gray-500 mb-6">Anti-Static Flex Bristles</p>
+                <div class="flex justify-center items-baseline gap-4 mb-8">
+                    <span class="font-serif text-2xl">$39.00</span>
+                    <span class="text-xs text-gray-400 line-through">$49.00</span>
+                </div>
+                <button class="w-full py-4 bg-vintage-dark text-vintage-cream font-sans text-xs font-bold uppercase tracking-widest hover:bg-vintage-pink hover:text-vintage-dark transition-colors border border-vintage-line">
+                    Shop Tangle Angel
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-vintage-cream text-vintage-dark">
+        <div class="grid grid-cols-1 md:grid-cols-3 border-b border-vintage-line">
+            <div class="p-12 border-b md:border-b-0 md:border-r border-vintage-line flex items-center justify-center">
+                <div class="w-32 h-32 border-2 border-vintage-line rounded-full flex items-center justify-center relative">
+                    <div class="absolute inset-1 border border-vintage-line rounded-full"></div>
+                    <img src="./images/logo.png" alt="Brand logo" class="w-20 h-20 object-contain" referrerpolicy="no-referrer"/>
+                </div>
+            </div>
+            
+            <div class="p-12 border-b md:border-b-0 md:border-r border-vintage-line flex flex-col items-center justify-center text-center">
+                <div class="mb-4">
+                    <img src="https://picsum.photos/seed/building/400/200?grayscale" alt="Atelier" class="h-24 object-contain mix-blend-multiply opacity-80" referrerpolicy="no-referrer"/>
+                </div>
+                <p class="font-serif italic text-lg">The Atelier</p>
+                <p class="font-sans text-xs uppercase tracking-widest mt-2">12 Rue de la Paix, Paris</p>
+            </div>
+
+            <div class="p-12 flex flex-col justify-center">
+                <ul class="space-y-4 font-sans text-xs font-bold uppercase tracking-widest">
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline">FAQs</a></li>
+                    <li><a href="#" class="hover:underline">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:underline">Terms & Policies</a></li>
+                    <li><a href="#" class="hover:underline">Wholesale</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="p-4 text-center font-sans text-[10px] uppercase tracking-widest opacity-50">
+            &copy; 2024 Eclat Hair Brushes. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

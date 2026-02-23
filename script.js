@@ -30,3 +30,28 @@ const observer = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.scroll-reveal').forEach(el => {
     observer.observe(el);
 });
+
+// Mobile menu toggle
+const mobileToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileOpen = document.getElementById('mobile-menu-open');
+const mobileClose = document.getElementById('mobile-menu-close');
+
+if (mobileToggle && mobileMenu && mobileOpen && mobileClose) {
+    mobileToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileOpen.classList.toggle('hidden');
+        mobileClose.classList.toggle('hidden');
+        mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileOpen.classList.remove('hidden');
+            mobileClose.classList.add('hidden');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+}

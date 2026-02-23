@@ -45,8 +45,25 @@
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-vintage-pink z-[60] w-0 transition-all duration-100 ease-out"></div>
 
+    <!-- Mobile Navbar -->
+    <nav class="md:hidden sticky top-0 z-50 bg-vintage-cream border-b border-vintage-line">
+        <div class="flex items-center justify-between px-4 py-3">
+            <a href="#home" class="font-script text-3xl leading-none text-vintage-pink">Eclat</a>
+            <button id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" class="w-10 h-10 border border-vintage-pink flex items-center justify-center text-vintage-pink">
+                <span id="mobile-menu-open">☰</span>
+                <span id="mobile-menu-close" class="hidden">✕</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden border-t border-vintage-line bg-vintage-cream">
+            <a href="#home" class="mobile-nav-link block px-4 py-3 border-b border-vintage-line text-xs uppercase tracking-[0.2em]">Home</a>
+            <a href="#radiate" class="mobile-nav-link block px-4 py-3 border-b border-vintage-line text-xs uppercase tracking-[0.2em]">Brush, Shine</a>
+            <a href="#every-touch" class="mobile-nav-link block px-4 py-3 border-b border-vintage-line text-xs uppercase tracking-[0.2em]">Every Touch</a>
+            <a href="#shop" class="mobile-nav-link block px-4 py-3 text-xs uppercase tracking-[0.2em]">The Masterpiece</a>
+        </div>
+    </nav>
+
     <!-- Navbar -->
-    <nav class="border-b border-vintage-line grid grid-cols-4 text-xs md:text-sm font-sans uppercase tracking-widest bg-vintage-cream sticky top-0 z-50">
+    <nav class="hidden md:grid border-b border-vintage-line grid-cols-4 text-xs md:text-sm font-sans uppercase tracking-widest bg-vintage-cream sticky top-0 z-50">
         <a href="#home" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Home</a>
         <a href="#radiate" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Brush, Shine</a>
         <a href="#every-touch" class="border-r border-vintage-line py-4 text-center hover:bg-vintage-pink/20 transition-colors">Every Touch</a>
@@ -101,7 +118,7 @@
                 </p>
             </div>
 
-            <div class="relative min-h-[560px] md:min-h-[660px] scroll-reveal delay-200">
+            <div class="relative min-h-[420px] md:min-h-[500px] scroll-reveal delay-200">
                 <div class="absolute inset-0 border border-vintage-line/30 bg-white/50 backdrop-blur-sm"></div>
                 <img src="./images/img05 1.png" alt="Tangle Angel brush detail visual" class="absolute left-1/2 top-1/2 w-[64%] md:w-[58%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_24px_40px_rgba(92,64,71,0.25)]" referrerpolicy="no-referrer"/>
 
@@ -183,7 +200,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4">
             <div class="col-span-1 md:col-span-4 border-b border-vintage-line p-8 flex justify-between items-end">
                 <h2 class="font-script text-5xl md:text-6xl text-vintage-pink scroll-reveal">Club & Gallery</h2>
-                <a href="#" class="font-sans text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4 hover:text-vintage-pink">View All</a>
+                <a href="#" class="hidden md:inline font-sans text-xs font-bold uppercase tracking-widest underline decoration-1 underline-offset-4 hover:text-vintage-pink">View All</a>
             </div>
             
             <!-- Gallery Items -->
@@ -243,19 +260,19 @@
     <!-- Feature List -->
     <section id="ritual" class="grid grid-cols-1 md:grid-cols-2 border-b border-vintage-line bg-vintage-cream">
         <div class="border-b md:border-b-0 md:border-r border-vintage-line h-full flex flex-col">
-            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-100">
+            <div class="flex-1 flex justify-between items-center px-8 py-5 md:py-0 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-100">
                 <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Natural Boar Bristles</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
             </div>
-            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-200">
+            <div class="flex-1 flex justify-between items-center px-8 py-5 md:py-0 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-200">
                 <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Hand-Carved Olive Wood</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
             </div>
-            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-300">
+            <div class="flex-1 flex justify-between items-center px-8 py-5 md:py-0 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-300">
                 <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Scalp Stimulation</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
             </div>
-            <div class="flex-1 flex justify-between items-center px-8 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-400">
+            <div class="flex-1 flex justify-between items-center px-8 py-5 md:py-0 border-b border-vintage-line last:border-b-0 hover:bg-vintage-pink/10 transition-colors cursor-pointer group scroll-reveal delay-400">
                 <span class="font-sans text-xs font-bold uppercase tracking-widest text-vintage-dark/60 group-hover:text-vintage-dark transition-colors">Lifetime Warranty</span>
                 <i data-lucide="arrow-right" class="w-4 h-4 text-vintage-dark/40 group-hover:text-vintage-dark transform group-hover:translate-x-2 transition-all"></i>
             </div>
